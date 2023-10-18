@@ -6,36 +6,38 @@
 /*   By: benny <benny@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 23:49:54 by benny             #+#    #+#             */
-/*   Updated: 2023/10/06 02:15:49 by benny            ###   ########.fr       */
+/*   Updated: 2023/10/14 19:47:17 by benny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
+#include "libft.h"
 
-// creates a substring from a big string to a max length of len 
-char *ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	int i;
-	char *substr;
+	int		i;
+	char	*substr;
 
-	substr = (char *)malloc(len - start + 1);
-	if(!substr)
-		return NULL;
+	substr = (char *)malloc(len + 1);
+	if (!substr)
+		return (NULL);
 	i = 0;
-	while(s[start] && i < len - start)
+	while (s[start] && i < len)
 	{
 		substr[i] = s[start];
 		start++;
 		i++;
 	}
 	substr[i] = '\0';
-	return substr;
+	return (substr);
 }
 
-int main(void)
-{
-	char * s = ft_substr("tripouille", 0, 42000);
+// int main(void)
+// {
+// 	char str []= "lorem ipsum dolor sit amet";
+// 	char *substr = ft_substr(str, 7, 10);
 
-	printf("%s\n", s);
-}
+// 	printf("%s\n", substr); // Expected: psum dolor
+
+// 	substr = ft_substr(str, 0, 10);
+// 	printf("%s\n", substr); // Expected: lorem ipsu
+// }

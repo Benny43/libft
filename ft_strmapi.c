@@ -6,7 +6,7 @@
 /*   By: benny <benny@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 16:22:33 by benny             #+#    #+#             */
-/*   Updated: 2023/10/10 16:30:41 by benny            ###   ########.fr       */
+/*   Updated: 2023/10/11 16:43:35 by benny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,14 +25,4 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		i++;
 	}
 	return (result);
-}
-
-
-char addOne(unsigned int i, char c) {return (i + c);}
-
-int main(void)
-{
-	char * s = ft_strmapi("1234", addOne);
-	
-	printf("%s\n", s);
 }

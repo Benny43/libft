@@ -6,7 +6,7 @@
 /*   By: benny <benny@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 16:44:54 by benny             #+#    #+#             */
-/*   Updated: 2023/10/09 17:27:33 by benny            ###   ########.fr       */
+/*   Updated: 2023/10/12 09:50:46 by benny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,14 @@
 
 void	ft_bzero(void *s, size_t n)
 {
+	int				i;
 	unsigned char	*str;
 
+	i = 0;
 	str = (unsigned char *)s;
-	while (n > 0)
+	while (i < n)
 	{
-		str[n] = '\0';
-		n--;
+		str[i] = 0;
+		i++;
 	}
 }
-
-// int main(void)
-// {
-//     char tab[100];
-// 	memset(tab, 'A', 100);
-// 	ft_bzero(tab, 50);
-// 	printf("%s\n", tab);
-// }

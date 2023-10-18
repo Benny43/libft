@@ -6,7 +6,7 @@
 /*   By: benny <benny@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 19:41:29 by benny             #+#    #+#             */
-/*   Updated: 2023/10/09 18:09:56 by benny            ###   ########.fr       */
+/*   Updated: 2023/10/12 21:25:39 by benny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,31 +14,30 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	char	*dest_tmp;
-	char	*src_tmp;
-	int		c;
+	char		*dest_tmp;
+	char const	*src_tmp;
+	int			c;
 
-	src_tmp = (char *)src;
-	dest_tmp = (char *)dest;
-	c = 0;
-	while (src_tmp[c] && (c < n))
+	src_tmp = src;
+	dest_tmp = dest;
+	c = n - 1;
+	if (dest_tmp > src_tmp)
 	{
-		dest_tmp[c] = src_tmp[c];
-		c++;
+		while (c >= 0)
+		{
+			dest_tmp[c] = src_tmp[c];
+			c--;
+		}
 	}
-	dest = dest_tmp;
+	else
+	{
+		// c = 0;
+		// while (c < n)
+		// {
+		// 	dest_tmp[c] = src_tmp[c];
+		// 	c++;
+		// }
+		ft_memcpy(dest_tmp, src_tmp, n);
+	}
 	return (dest);
-}
-
-#include <stdio.h>
-
-int main(void)
-{
-    char s[] = {65, 66, 67, 68, 69, 0, 45};
-	char s0[] = { 0,  0,  0,  0,  0,  0, 0};
-
-    printf("Antes -\nsrc:%s\ndest:%s\n", s, s0);//Mudar parametros do printf se necessario
-    ft_memmove(s0, s, 7); //Mudar nome e parametros da funcao
-    printf("Depois -\nsrc:%s\ndest:%s\n", s, s0);//Mudar parametros do printf se necessario
-    
 }

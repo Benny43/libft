@@ -6,12 +6,11 @@
 /*   By: benny <benny@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/02 13:23:33 by bde-mato          #+#    #+#             */
-/*   Updated: 2023/10/09 17:32:07 by benny            ###   ########.fr       */
+/*   Updated: 2023/10/12 09:56:47 by benny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <ctype.h>
+#include "libft.h"
 
 int	ft_isalnum(int c)
 {
@@ -20,13 +19,4 @@ int	ft_isalnum(int c)
 		return (1);
 	}
 	return (0);
-}
-
-int main(void)
-{
-    int c;
-
-    c = 49; //Mudar nome e parametros da funcao
-    printf("Minha: %d\n", ft_isalnum(c));//Mudar parametros do printf se necessario
-    printf("libc: %d\n", isalnum(c));//Mudar parametros do printf se necessario
 }

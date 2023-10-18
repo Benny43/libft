@@ -6,12 +6,11 @@
 /*   By: benny <benny@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 15:44:07 by benny             #+#    #+#             */
-/*   Updated: 2023/10/09 17:35:22 by benny            ###   ########.fr       */
+/*   Updated: 2023/10/12 09:56:16 by benny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <ctype.h>
+#include "libft.h"
 
 int	ft_isprint(int c)
 {
@@ -20,12 +19,4 @@ int	ft_isprint(int c)
 		return (1);
 	}
 	return (0);
-}
-
-int main(void)
-{
-    int c = 48;
-    char l = '5';
-
-    printf("%d\n", ft_isprint(c));
 }

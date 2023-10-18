@@ -6,14 +6,13 @@
 /*   By: benny <benny@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 03:09:08 by benny             #+#    #+#             */
-/*   Updated: 2023/10/10 16:17:19 by benny            ###   ########.fr       */
+/*   Updated: 2023/10/15 17:59:22 by benny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// check how many digits there is (/10) and make sure you have enough space for the minus, 
-// if there is one and the null terminator
+
 static int	get_int_len(int n)
 {
 	long	nb;
@@ -21,7 +20,9 @@ static int	get_int_len(int n)
 
 	count = 0;
 	nb = n;
-	while (nb <= 0)
+	if (nb == 0)
+		count++;
+	while (nb < 0)
 	{
 		count++;
 		nb = -nb;
@@ -45,13 +46,15 @@ char	*ft_itoa(int n)
 	if (!res)
 		return (NULL);
 	nb = n;
-	res[0] = '0';
-	if (nb < 0)
+	if (n == 0)
+		res[0] = '0';
+	res[len] = '\0';
+	if (n < 0)
 	{
 		res[0] = '-';
 		nb = -nb;
-		len--;
 	}
+	len--;
 	while (nb > 0)
 	{
 		res[len] = (nb % 10) + '0';
@@ -59,12 +62,4 @@ char	*ft_itoa(int n)
 		len--;
 	}
 	return (res);
-}
-
-int main(void)
-{
-	int n = -4242;
-
-	char *str = ft_itoa(n);
-	printf ("%s\n", str);
 }

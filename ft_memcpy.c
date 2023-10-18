@@ -6,7 +6,7 @@
 /*   By: benny <benny@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 16:44:54 by benny             #+#    #+#             */
-/*   Updated: 2023/10/09 18:09:10 by benny            ###   ########.fr       */
+/*   Updated: 2023/10/13 00:53:56 by benny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,21 +21,20 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	c = 0;
 	tmp_dest = (char *)dest;
 	tmp_src = (char *)src;
+	if ((tmp_dest == NULL) || (tmp_src == NULL))
+		return (NULL);
 	while (c < n)
 	{
 		tmp_dest[c] = tmp_src[c];
 		c++;
 	}
-	return (dest);
+	return ((char *)dest);
 }
 
-int main(void)
-{
-    char dest[50];
-	char src[] = "Olaaaa";	
+// int main(void)
+// {
+// 	char *str = NULL;
+// 	char *dest = "olaaaa";
 
-    ft_memcpy(dest, src, 3);
-    printf("ft_memcpy -\ndest:%s\n", dest);
-	memcpy(dest, src, 3);
-	printf("memcpy -\ndest:%s\n", dest);
-}
+// 	printf("%s\n", (char *)ft_memcpy("segfaulter tu dois", NULL, 17));
+// }
