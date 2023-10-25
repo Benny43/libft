@@ -6,7 +6,7 @@
 /*   By: benny <benny@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 16:14:37 by benny             #+#    #+#             */
-/*   Updated: 2023/10/15 18:07:46 by benny            ###   ########.fr       */
+/*   Updated: 2023/10/24 20:49:04 by benny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@
 # include <stddef.h>
 # include <unistd.h>
 
-// Part 1
 void	*ft_calloc(size_t nmemb, size_t size);
 int		ft_atoi(const char *nptr);
 void	ft_bzero(void *s, size_t n);
@@ -37,7 +36,7 @@ char	*ft_strchr(const char *str, int c);
 char	*ft_strdup(char *str);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
-int		ft_strlen(char *str);
+int		ft_strlen(char const *str);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 char	*ft_strrchr(const char *str, int c);

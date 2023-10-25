@@ -6,7 +6,7 @@
 /*   By: benny <benny@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 19:41:29 by benny             #+#    #+#             */
-/*   Updated: 2023/10/12 21:25:39 by benny            ###   ########.fr       */
+/*   Updated: 2023/10/25 20:18:25 by benny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,6 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	else
 	{
-		// c = 0;
-		// while (c < n)
-		// {
-		// 	dest_tmp[c] = src_tmp[c];
-		// 	c++;
-		// }
 		ft_memcpy(dest_tmp, src_tmp, n);
 	}
 	return (dest);

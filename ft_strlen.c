@@ -6,18 +6,17 @@
 /*   By: benny <benny@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 16:31:24 by benny             #+#    #+#             */
-/*   Updated: 2023/10/09 16:32:02 by benny            ###   ########.fr       */
+/*   Updated: 2023/10/25 20:17:56 by benny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(char *str)
+int	ft_strlen(char const *str)
 {
 	int	c;
 
 	c = 0;
-
 	while (str[c] != '\0')
 	{
 		c++;

@@ -6,7 +6,7 @@
 /*   By: benny <benny@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 23:49:54 by benny             #+#    #+#             */
-/*   Updated: 2023/10/14 19:47:17 by benny            ###   ########.fr       */
+/*   Updated: 2023/10/24 21:38:45 by benny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	int		i;
 	char	*substr;
 
-	substr = (char *)malloc(len + 1);
+	substr = (char *)malloc((len + 1) * sizeof(unsigned char));
 	if (!substr)
 		return (NULL);
 	i = 0;
