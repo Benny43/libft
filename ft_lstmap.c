@@ -6,7 +6,7 @@
 /*   By: benny <benny@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 02:25:28 by benny             #+#    #+#             */
-/*   Updated: 2023/10/28 02:44:00 by benny            ###   ########.fr       */
+/*   Updated: 2023/11/15 19:08:19 by benny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,27 @@
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*nlist;
-	t_list	*nnode;
+	t_list	*current;
 
-	nlist = NULL;
-	while (lst)
+	if (!lst)
+		return (NULL);
+	nlist = ft_lstnew(f(lst->content));
+	if (!nlist)
 	{
-		nnode = ft_lstnew((f)(lst->content));
-		if (!nnode)
-			ft_lstclear(&nnode, del);
-		ft_lstadd_back(&nlist, nnode);
+		ft_lstdelone(nlist, del);
+		return (NULL);
+	}
+	current = nlist;
+	while (lst->next)
+	{
 		lst = lst->next;
+		current->next = ft_lstnew(f(lst->content));
+		if (!current->next)
+		{
+			ft_lstclear(&current, del);
+			return (NULL);
+		}
+		current = current->next;
 	}
 	return (nlist);
 }

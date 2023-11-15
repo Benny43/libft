@@ -6,7 +6,7 @@
 /*   By: benny <benny@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 16:44:54 by benny             #+#    #+#             */
-/*   Updated: 2023/10/13 00:53:56 by benny            ###   ########.fr       */
+/*   Updated: 2023/11/15 13:33:37 by benny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	c = 0;
 	tmp_dest = (char *)dest;
 	tmp_src = (char *)src;
-	if ((tmp_dest == NULL) || (tmp_src == NULL))
+	if ((tmp_dest == NULL) && (tmp_src == NULL))
 		return (NULL);
 	while (c < n)
 	{
