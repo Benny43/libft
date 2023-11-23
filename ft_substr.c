@@ -6,7 +6,7 @@
 /*   By: benny <benny@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 23:49:54 by benny             #+#    #+#             */
-/*   Updated: 2023/11/15 14:09:45 by benny            ###   ########.fr       */
+/*   Updated: 2023/11/20 19:28:20 by benny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,14 +36,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	substr[i - start] = '\0';
 	return (substr);
 }
-
-// int main(void)
-// {
-// 	char str []= "lorem ipsum dolor sit amet";
-// 	char *substr = ft_substr(str, 7, 10);
-
-// 	printf("%s\n", substr); // Expected: psum dolor
-
-// 	substr = ft_substr(str, 0, 10);
-// 	printf("%s\n", substr); // Expected: lorem ipsu
-// }

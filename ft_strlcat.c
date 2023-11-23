@@ -6,7 +6,7 @@
 /*   By: benny <benny@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 00:51:06 by benny             #+#    #+#             */
-/*   Updated: 2023/10/13 12:24:35 by benny            ###   ########.fr       */
+/*   Updated: 2023/11/20 19:29:51 by benny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,13 +37,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	}
 	return (ft_strlen((char *)src) + (int)size);
 }
-
-// int main(void)
-// {
-// 	char dest[30]; memset(dest, 0, 30);
-// 	char * src = (char *)"AAAAAAAAA";
-
-// 	dest[0] = 'B';
-// 	printf("%ld\n", ft_strlcat(dest, src, 0));
-// 	printf("%s\n", dest);
-// }

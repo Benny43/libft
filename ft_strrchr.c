@@ -6,7 +6,7 @@
 /*   By: benny <benny@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 01:44:44 by benny             #+#    #+#             */
-/*   Updated: 2023/10/13 13:31:49 by benny            ###   ########.fr       */
+/*   Updated: 2023/11/20 19:29:30 by benny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,3 @@ char	*ft_strrchr(const char *s, int c)
 		l = str;
 	return (l);
 }
-
-// int main(void)
-// {
-// 	char str2[] = "bonjour";
-
-// 	printf("%s\n", ft_strrchr(str2 + 2, 'b'));
-// }
